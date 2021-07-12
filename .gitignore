@@ -3,3 +3,6 @@
 ################################################################################
 /.vs/Vis-Ability.Azure.KeyVault/v16
 /.vs
+/src/Azure.KeyVault/bin/Debug
+/src/Azure.KeyVault/obj
+/src/Azure.KeyVault/Properties
