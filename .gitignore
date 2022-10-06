@@ -6,3 +6,4 @@
 /src/Azure.KeyVault/bin/Debug
 /src/Azure.KeyVault/obj
 /src/Azure.KeyVault/Properties
+/src/obj/Debug/net6.0
