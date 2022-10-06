@@ -2,17 +2,8 @@
 
   <PropertyGroup>
 	  <TargetFramework>net6.0</TargetFramework>
-	  <ApplicationIcon />
 	  <OutputType>Library</OutputType>
-	  <StartupObject />
-	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-	  <PackageId>ActivuCloud.Azure.KeyVault</PackageId>
-	  <Product>ActivuCloud.Azure.KeyVault</Product>
-	  <Company>Activu</Company>
 	  <Authors>Davis, Wayne</Authors>
-	  <IsPackable>true</IsPackable>
-	  <Version>1.0.1</Version>
-	  <Description>Activu custom implementation of Azure Key Vault</Description>
   </PropertyGroup>
 
   <ItemGroup>

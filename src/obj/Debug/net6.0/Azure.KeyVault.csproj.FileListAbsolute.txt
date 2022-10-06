@@ -1,0 +1,5 @@
+F:\source\repos\theBlazeyDeveloper\Azure\KeyVault\src\obj\Debug\net6.0\Azure.KeyVault.csproj.AssemblyReference.cache
+F:\source\repos\theBlazeyDeveloper\Azure\KeyVault\src\obj\Debug\net6.0\Azure.KeyVault.GeneratedMSBuildEditorConfig.editorconfig
+F:\source\repos\theBlazeyDeveloper\Azure\KeyVault\src\obj\Debug\net6.0\Azure.KeyVault.AssemblyInfoInputs.cache
+F:\source\repos\theBlazeyDeveloper\Azure\KeyVault\src\obj\Debug\net6.0\Azure.KeyVault.AssemblyInfo.cs
+F:\source\repos\theBlazeyDeveloper\Azure\KeyVault\src\obj\Debug\net6.0\Azure.KeyVault.csproj.CoreCompileInputs.cache
