@@ -1,12 +1,11 @@
-﻿using Azure;
-using Azure.Identity;
+﻿using Azure.Identity;
 using Azure.Security.KeyVault.Keys;
 using System;
 using System.Collections.Generic;
 using System.Net;
 using System.Threading.Tasks;
 
-namespace VisAbility.Azure.KeyVault
+namespace Azure.KeyVault
 {
     internal class KeyVaultKeyClient : IKeyClient
     {
@@ -25,9 +24,9 @@ namespace VisAbility.Azure.KeyVault
 
         public Uri VaultUri { get; }
 
-        public async Task<IKey> GetAsync(string Name)
+        public async Task<IKey> GetAsync(string name)
         {
-            var response = await TryGet(Name);
+            var response = await TryGet(name);
             var rawResponse = response.GetRawResponse();
 
             var StatusCode = rawResponse.Status;
@@ -68,11 +67,11 @@ namespace VisAbility.Azure.KeyVault
             }
         }
 
-        async Task<Response<KeyVaultKey>> TryGet(string Name) => await Client.GetKeyAsync(Name);
+        async Task<Response<KeyVaultKey>> TryGet(string name) => await Client.GetKeyAsync(name);
 
-        static string ParseBaseUrlForSecretsMethod(string BaseUrl)
+        static string ParseBaseUrlForSecretsMethod(string baseUrl)
         {
-            var TempUrl = BaseUrl;
+            var TempUrl = baseUrl;
 
             return TempUrl.Remove(TempUrl.Length - 8);
         }

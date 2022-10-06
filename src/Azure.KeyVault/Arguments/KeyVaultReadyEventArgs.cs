@@ -1,14 +1,14 @@
 ﻿using System;
 
-namespace VisAbility.Azure.KeyVault
+namespace Azure.KeyVault
 {
     public class KeyVaultReadyEventArgs : EventArgs
     {
         public bool IsReady { get; set; }
 
-        public KeyVaultReadyEventArgs(bool IsReady)
+        public KeyVaultReadyEventArgs(bool isReady)
         {
-            this.IsReady = IsReady;
+            IsReady = isReady;
         }
     }
 }

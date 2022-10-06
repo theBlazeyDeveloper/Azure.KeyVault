@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace VisAbility.Azure.KeyVault
+namespace Azure.KeyVault
 {
     public interface IKey
     {

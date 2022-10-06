@@ -2,9 +2,9 @@
 using System;
 using System.Collections.Generic;
 
-namespace VisAbility.Azure.KeyVault
+namespace Azure.KeyVault
 {
-    public class Key : IKey
+    public record Key : IKey
     {
         public Key(KeyVaultKey k)
         {

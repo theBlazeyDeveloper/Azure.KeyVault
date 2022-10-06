@@ -1,12 +1,12 @@
 ﻿using Microsoft.Extensions.Configuration;
 using System;
 
-namespace VisAbility.Azure.KeyVault
+namespace Azure.KeyVault
 {
     public class KeyVaultOptions
     {
-        const string SectionName = "KeyVault";
-        const string ValueName = "BaseUri";
+        const string _sectionName = "KeyVault";
+        const string _valueName = "BaseUri";
 
         public Uri VaultUri { get; set; }
 
@@ -16,17 +16,17 @@ namespace VisAbility.Azure.KeyVault
         ///     "BaseUri" : "https://[Your Key Vault name here].vault.azure.net"
         /// } 
         /// </summary>
-        /// <param name="Config">Instance of IConfiguration</param>
-        public void GetKeyVaultFromAppSettings(IConfiguration Config)
+        /// <param name="config">Instance of IConfiguration</param>
+        public void GetKeyVaultFromAppSettings(IConfiguration config)
         {
-            var keyVaultSection = Config.GetSection(SectionName);
+            var keyVaultSection = config.GetSection(_sectionName);
 
             if (keyVaultSection == null)
-                throw new ConfigurationSectionNotFoundException(SectionName);
+                throw new ConfigurationSectionNotFoundException(_sectionName);
 
             if (keyVaultSection.Exists())
             {
-                var baseUri = keyVaultSection.GetValue<string>(ValueName);
+                var baseUri = keyVaultSection.GetValue<string>(_valueName);
 
                 if (!string.IsNullOrEmpty(baseUri))
                     VaultUri = new Uri(baseUri);

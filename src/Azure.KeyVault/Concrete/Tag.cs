@@ -1,11 +1,11 @@
-﻿namespace VisAbility.Azure.KeyVault
+﻿namespace Azure.KeyVault
 {
-    public class Tag
+    public record Tag
     {
-        public Tag(string Name, string Value)
+        public Tag(string name, string value)
         {
-            this.Name = Name;
-            this.Value = Value;
+            Name = name;
+            Value = value;
         }
         public string Name { get; }
         public string Value { get; }

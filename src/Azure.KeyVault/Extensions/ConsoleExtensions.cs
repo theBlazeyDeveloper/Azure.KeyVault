@@ -1,7 +1,7 @@
 ﻿using Azure;
 using System;
 
-namespace VisAbility.Azure.KeyVault
+namespace Azure.KeyVault
 {
     internal static class ConsoleEx
     {

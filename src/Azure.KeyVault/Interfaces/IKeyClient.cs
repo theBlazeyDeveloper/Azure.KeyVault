@@ -1,6 +1,6 @@
 ﻿using Azure.Security.KeyVault.Keys;
 
-namespace VisAbility.Azure.KeyVault
+namespace Azure.KeyVault
 {
     public interface IKeyClient : IClient<IKey>
     {

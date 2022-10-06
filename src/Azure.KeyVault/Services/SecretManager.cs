@@ -3,7 +3,7 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace VisAbility.Azure.KeyVault
+namespace Azure.KeyVault
 {
     internal class SecretManager : ISecretManager
     {
@@ -30,11 +30,15 @@ namespace VisAbility.Azure.KeyVault
                     OnManagerReady?.Invoke(this, new KeyVaultReadyEventArgs(!IsBusy));
             }
         }
+
         public event KeyVaultReadyHandler OnManagerReady;
+
         public event KeyVaultProgressHandler OnProgressUpdated;
+
         public event KeyVaultRetrievalCompletedHandler OnCompleted;
 
         public IEnumerable<ISecret> Secrets { get => SecretDictionary.Values; }
+
         public async ValueTask RetrieveSecretsAsync(CallbackDelegate Callback = null)
         {
             if (Callback != null)

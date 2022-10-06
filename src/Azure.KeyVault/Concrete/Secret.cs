@@ -2,9 +2,9 @@
 using System;
 using System.Collections.Generic;
 
-namespace VisAbility.Azure.KeyVault
+namespace Azure.KeyVault
 {
-    public class Secret : ISecret
+    public record Secret : ISecret
     {
         public Secret(KeyVaultSecret s)
         {
@@ -25,11 +25,17 @@ namespace VisAbility.Azure.KeyVault
         }
 
         public Uri Id { get; set; }
+
         public string Value { get; }
+
         public string Name { get; }
+
         public string ContentType { get; }
+
         public bool HasTags { get; }
+
         public SecretProperties Properties { get; }
+
         public IList<Tag> Tags { get; } = new List<Tag>();
     }
 }

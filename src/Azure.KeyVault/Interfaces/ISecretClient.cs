@@ -1,6 +1,6 @@
 ﻿using Azure.Security.KeyVault.Secrets;
 
-namespace VisAbility.Azure.KeyVault
+namespace Azure.KeyVault
 {
     public interface ISecretClient : IClient<ISecret>
     {

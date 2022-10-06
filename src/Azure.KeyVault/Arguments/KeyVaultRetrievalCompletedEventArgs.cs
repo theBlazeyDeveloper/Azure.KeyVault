@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace VisAbility.Azure.KeyVault
+namespace Azure.KeyVault
 {
     public class KeyVaultRetrievalCompletedEventArgs : EventArgs
     {
@@ -9,10 +9,10 @@ namespace VisAbility.Azure.KeyVault
 
         public IEnumerable<ISecret> Secrets { get; }
 
-        public KeyVaultRetrievalCompletedEventArgs(bool IsComplete, IEnumerable<ISecret> Secrets)
+        public KeyVaultRetrievalCompletedEventArgs(bool isComplete, IEnumerable<ISecret> secrets)
         {
-            this.Secrets = Secrets;
-            this.IsComplete = IsComplete;
+            Secrets = secrets;
+            IsComplete = isComplete;
         }
     }
 }

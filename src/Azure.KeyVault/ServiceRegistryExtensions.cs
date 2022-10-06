@@ -1,7 +1,7 @@
-﻿using Microsoft.Extensions.DependencyInjection.Extensions;
+﻿using Azure.KeyVault;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Options;
 using System;
-using VisAbility.Azure.KeyVault;
 
 namespace Microsoft.Extensions.DependencyInjection
 {

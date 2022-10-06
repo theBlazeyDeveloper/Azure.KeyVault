@@ -1,14 +1,14 @@
 ﻿using System;
 
-namespace VisAbility.Azure.KeyVault
+namespace Azure.KeyVault
 {
     public class KeyVaultProgressEventArgs : EventArgs
     {
-        public KeyVaultProgressEventArgs(int AddedSecrets, int UpdatedSecrets, ISecret Secret)
+        public KeyVaultProgressEventArgs(int addedSecrets, int updatedSecrets, ISecret secret)
         {
-            this.Secret = Secret;
-            this.AddedSecrets = AddedSecrets;
-            this.UpdatedSecrets = UpdatedSecrets;
+            Secret = secret;
+            AddedSecrets = addedSecrets;
+            UpdatedSecrets = updatedSecrets;
         }
 
         public int AddedSecrets { get; }

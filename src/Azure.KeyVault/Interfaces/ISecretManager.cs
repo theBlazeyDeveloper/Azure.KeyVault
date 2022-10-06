@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace VisAbility.Azure.KeyVault
+namespace Azure.KeyVault
 {
     public interface ISecretManager
     {

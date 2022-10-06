@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Net;
 using System.Threading.Tasks;
 
-namespace VisAbility.Azure.KeyVault
+namespace Azure.KeyVault
 {
     internal class KeyVaultSecretClient : ISecretClient
     {
@@ -24,9 +24,9 @@ namespace VisAbility.Azure.KeyVault
         public SecretClient Client { get; }
         public Uri VaultUri { get; }
 
-        public async Task<ISecret> GetAsync(string Name)
+        public async Task<ISecret> GetAsync(string name)
         {
-            var response = await TryGet(Name);
+            var response = await TryGet(name);
             var rawResponse = response.GetRawResponse();
 
             var StatusCode = rawResponse.Status;
